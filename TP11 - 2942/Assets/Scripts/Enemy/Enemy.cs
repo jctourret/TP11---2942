@@ -1,6 +1,4 @@
-﻿using System;
-
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Enemy : MonoBehaviour,IHittable
 {
@@ -12,14 +10,11 @@ public class Enemy : MonoBehaviour,IHittable
    private Rigidbody2D _rb;
    private Vector2 _look;
    private Animator _animator;
-   private SpriteRenderer _sprite;
-   
 
    private void Awake()
    {
        _rb = GetComponent<Rigidbody2D>();
        _animator = GetComponent<Animator>();
-       _sprite = GetComponentInChildren<SpriteRenderer>();
        _look = gameObject.transform.up;
    }
 
@@ -36,12 +31,12 @@ public class Enemy : MonoBehaviour,IHittable
        if (dist > _trackingRadius)
        {
            _target = Vector2.down.normalized;
-           gameObject.transform.up = _look;// reemplaza al lookat
+         //  gameObject.transform.up = _look;// reemplaza al lookat
        }
        else
        {
            _target =_player.position.normalized;
-           gameObject.transform.up = _player.position - gameObject.transform.position;// reemplaza al lookat
+          // gameObject.transform.up = _player.position - gameObject.transform.position;// reemplaza al lookat
        }
       
    }
@@ -52,8 +47,7 @@ public class Enemy : MonoBehaviour,IHittable
 
    public void Damage()
    {
-       _animator.SetBool("Death",true);
-       
+      _animator.SetBool("Death",true);
    }
 
    public void Death()

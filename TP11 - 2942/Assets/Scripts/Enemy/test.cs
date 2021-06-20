@@ -12,6 +12,6 @@ public class test : MonoBehaviour
         
         if (other.transform.GetComponent<IHittable>() == null) return;
         other.transform.GetComponent<IHittable>().Damage();
-        Debug.Log("entraste papu ");
+        
     }
 }
