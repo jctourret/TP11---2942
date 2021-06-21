@@ -1,9 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+    public static GameManager Instance { get; }
+
     int _currentScore;
     int _highScore;
 
@@ -26,11 +29,11 @@ public class GameManager : MonoBehaviour
 
     void toCredits()
     {
-
+        ChangeScene("GameOver");
     }
 
-    void toGameplay()
+    public void ChangeScene(string sceneName)
     {
-
+        SceneManager.LoadScene(sceneName);
     }
 }
