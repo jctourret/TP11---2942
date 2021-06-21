@@ -1,7 +1,10 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
-public class PlayerController : MonoBehaviour
+public class PlayerController : MonoBehaviour, IHittable
 {
+    public static Action onPlayerDamage;
+    public static Action onPlayerDeath;
     bool _alternativeFire;
     [SerializeField]
     float _speed = 15;
@@ -64,5 +67,13 @@ public class PlayerController : MonoBehaviour
         GameObject bombInstance = Instantiate(_bomb, transform.position,Quaternion.identity);
     }
 
+    public void Damage()
+    {
+        onPlayerDamage?.Invoke();
+    }
 
+    void Death()
+    {
+        onPlayerDamage?.Invoke();
+    }
 }
