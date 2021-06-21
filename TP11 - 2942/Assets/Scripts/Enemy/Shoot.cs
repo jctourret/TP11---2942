@@ -2,20 +2,18 @@
 
 public class Shoot : MonoBehaviour
 {
-   public Transform canyonLeft;
-   public Transform canyonRight;
+   public Transform canyon;
    public GameObject bullet;
    [SerializeField]private float timeToShoot;
 
    private void Start()
    {
-      InvokeRepeating("ShootCanyons",timeToShoot,timeToShoot);
+      InvokeRepeating("ShootCanyon",timeToShoot,timeToShoot);
    }
 
-   private void ShootCanyons()
+   private void ShootCanyon()
    {
-      Instantiate(bullet,canyonRight.position,canyonRight.rotation,gameObject.transform);
-      Instantiate(bullet,canyonLeft.position,canyonLeft.rotation,gameObject.transform);
+      Instantiate(bullet,canyon.position,canyon.rotation,gameObject.transform);
    }
    
 }

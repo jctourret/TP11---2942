@@ -13,15 +13,17 @@ GameObject:
   - component: {fileID: 1035473846042399715}
   - component: {fileID: 1035473846042399718}
   - component: {fileID: 1035473846042399713}
-  - component: {fileID: 1035473846042399712}
   - component: {fileID: 277310837}
+  - component: {fileID: 244421104}
+  - component: {fileID: 822899165693517733}
+  - component: {fileID: 4784313341312134178}
   m_Layer: 8
   m_Name: Enemy_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1035473846042399741
 Transform:
   m_ObjectHideFlags: 0
@@ -165,7 +167,7 @@ PolygonCollider2D:
       - {x: 0.35744712, y: -0.25080347}
       - {x: 1.0457509, y: -0.5266049}
       - {x: 0.7449723, y: 0.080034435}
---- !u!114 &1035473846042399712
+--- !u!114 &277310837
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -174,28 +176,55 @@ MonoBehaviour:
   m_GameObject: {fileID: 1035473846042399740}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e1d4457744bdf214293e28747c2c073d, type: 3}
+  m_Script: {fileID: 11500000, guid: 59d57ded94f4e7a49b2bf423a10fb390, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 2
-  _player: {fileID: 0}
-  _trackingRadius: 4
---- !u!114 &277310837
+  canyon: {fileID: 1035473847793076463}
+  bullet: {fileID: 8504282468677304721, guid: 81848304db9f9a34ebf259d150d0b1b4, type: 3}
+  timeToShoot: 1
+--- !u!114 &244421104
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1035473846042399740}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 59d57ded94f4e7a49b2bf423a10fb390, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canyonLeft: {fileID: 1035473847793076463}
-  canyonRight: {fileID: 4775237201170684960}
+  canyon: {fileID: 4775237201170684960}
   bullet: {fileID: 8504282468677304721, guid: 81848304db9f9a34ebf259d150d0b1b4, type: 3}
   timeToShoot: 1
+--- !u!114 &822899165693517733
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1035473846042399740}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 220f35e5a41aed54a9a1983fdcc95839, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &4784313341312134178
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1035473846042399740}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 914b491ddae6aa7469272cfdda73aaab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _speed: 2
+  _player: {fileID: 0}
+  _trackingRadius: 4
+  lookAt: 0
 --- !u!1 &1035473847793076462
 GameObject:
   m_ObjectHideFlags: 0
