@@ -23,7 +23,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1035473846042399741
 Transform:
   m_ObjectHideFlags: 0
@@ -224,7 +224,7 @@ MonoBehaviour:
   _speed: 2
   _player: {fileID: 0}
   _trackingRadius: 4
-  lookAt: 0
+  lookAt: 1
 --- !u!1 &1035473847793076462
 GameObject:
   m_ObjectHideFlags: 0

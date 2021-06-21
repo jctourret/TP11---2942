@@ -17,6 +17,7 @@ public class Bullet : MonoBehaviour,IHittable
     {
        Move();
        Destroy(gameObject,timeToDestroy);
+       
     }
     
     private void Move()
