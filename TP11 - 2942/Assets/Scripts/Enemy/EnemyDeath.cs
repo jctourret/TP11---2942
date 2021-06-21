@@ -17,8 +17,8 @@ public class EnemyDeath : MonoBehaviour,IHittable
 
     public void Death()
     {
-        Destroy(gameObject);
         onEnemyDeath?.Invoke();
+        Destroy(gameObject);
     }
     
 }

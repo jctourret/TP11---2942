@@ -77,6 +77,9 @@ TextureImporter:
   - first:
       213: 2912215719876157652
     second: spaceship_58
+  - first:
+      213: 7691294901476699688
+    second: spaceship_0
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -268,6 +271,27 @@ TextureImporter:
       bones: []
       spriteID: 9df90840ffbd5ff80800000000000000
       internalID: -8073304868653064231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spaceship_0
+      rect:
+        serializedVersion: 2
+        x: 413
+        y: 864
+        width: 175
+        height: 178
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82eaa4176f7fcba60800000000000000
+      internalID: 7691294901476699688
       vertices: []
       indices: 
       edges: []

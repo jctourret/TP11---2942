@@ -50,7 +50,6 @@ MonoBehaviour:
   _speed: 2
   _player: {fileID: 0}
   _trackingRadius: 4
-  lookAt: 1
 --- !u!50 &2670643764119430919
 Rigidbody2D:
   serializedVersion: 4
@@ -66,7 +65,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -86,7 +85,7 @@ GameObject:
   - component: {fileID: 2670643764968266513}
   - component: {fileID: 2670643764968266525}
   - component: {fileID: 2670643764968266514}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: spaceship_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -286,7 +285,7 @@ GameObject:
   - component: {fileID: 2670643765009097579}
   - component: {fileID: 2670643765009097591}
   - component: {fileID: 2670643765009097588}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: spaceship_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -486,7 +485,7 @@ GameObject:
   - component: {fileID: 2670643765506802605}
   - component: {fileID: 2670643765506802601}
   - component: {fileID: 2670643765506802606}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: spaceship_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
