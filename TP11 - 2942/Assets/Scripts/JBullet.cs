@@ -28,7 +28,7 @@ public class JBullet : MonoBehaviour
 
     private void Move()
     {
-        _rb.MovePosition(new Vector3(_rb.position.x,_rb.position.y,0.0f) + _direction * (_speed * Time.deltaTime));
+        _rb.MovePosition(_rb.position + (Vector2)_direction * (_speed * Time.deltaTime));
     }
 
     public void Damage()

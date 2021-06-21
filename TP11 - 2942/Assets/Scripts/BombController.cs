@@ -7,7 +7,7 @@ public class BombController : MonoBehaviour
 {
     float _travelDistance = 20;
     float _maxDistantce;
-    float _speed;
+    float _speed = 5.0f;
     float _explosionRadius = 100;
 
     private void Start()

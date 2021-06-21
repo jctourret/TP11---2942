@@ -16,12 +16,13 @@ public class PlayerController : MonoBehaviour, IHittable
     GameObject _bullet;
     GameObject _bomb;
     Renderer _bulletRenderer;
-
+    Animator _animator;
     void Start()
     {
         _bullet = Resources.Load<GameObject>("Bullet");
         _bomb = Resources.Load<GameObject>("Bomb");
         _bulletRenderer = _bullet.GetComponent<Renderer>();
+        _animator = GetComponent<Animator>();
     }
 
     void Update()
@@ -51,12 +52,12 @@ public class PlayerController : MonoBehaviour, IHittable
     {
         if (_alternativeFire)
         {
-            GameObject bulletInstance = Instantiate(_bullet,transform.position + new Vector3(-_xOffset, _bulletRenderer.bounds.size.y,0.0f),Quaternion.identity,transform);
+            GameObject bulletInstance = Instantiate(_bullet,transform.position + new Vector3(-_xOffset, _bulletRenderer.bounds.size.y,0.0f), transform.rotation , transform);
             _alternativeFire = false;
         }
         else
         {
-            GameObject bulletInstance = Instantiate(_bullet, transform.position + new Vector3(_xOffset, _bulletRenderer.bounds.size.y, 0.0f), Quaternion.identity,transform);
+            GameObject bulletInstance = Instantiate(_bullet, transform.position + new Vector3(_xOffset, _bulletRenderer.bounds.size.y, 0.0f), transform.rotation,transform);
             _alternativeFire = true;
         }
         _fireCooldown = 0.0f;
@@ -69,11 +70,14 @@ public class PlayerController : MonoBehaviour, IHittable
 
     public void Damage()
     {
+        Debug.Log("Recibi daño");
         onPlayerDamage?.Invoke();
+        _animator.SetBool("Death", true);
     }
 
-    void Death()
+    public void Death()
     {
+        Debug.Log("Me mori");
         onPlayerDamage?.Invoke();
     }
 }

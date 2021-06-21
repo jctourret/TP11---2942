@@ -13,13 +13,13 @@ public class GameManager : MonoBehaviour
     private void OnEnable()
     {
         PlayerController.onPlayerDeath += toCredits;
-        //Muerte enemigo
+        EnemyDeath.onEnemyDeath += updateScore;
     }
 
     private void onDisable()
     {
-        PlayerController.onPlayerDeath += toCredits;
-        //Muerte enemigo
+        PlayerController.onPlayerDeath -= toCredits;
+        EnemyDeath.onEnemyDeath -= updateScore;
     }
 
     void updateScore()

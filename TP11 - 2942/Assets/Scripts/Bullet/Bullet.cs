@@ -21,7 +21,7 @@ public class Bullet : MonoBehaviour,IHittable
     
     private void Move()
     {  
-            _rb.MovePosition(_rb.position+Vector2.down.normalized* (_speed * Time.deltaTime));
+            _rb.MovePosition(_rb.position + Vector2.down.normalized* (_speed * Time.deltaTime));
     }
     
     public void Damage()
