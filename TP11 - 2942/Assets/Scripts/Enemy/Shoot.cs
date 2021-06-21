@@ -13,7 +13,7 @@ public class Shoot : MonoBehaviour
 
    private void ShootCanyon()
    {
-      Instantiate(bullet,canyon.position,canyon.rotation,gameObject.transform);
+      Instantiate(bullet,canyon.position,canyon.rotation);
    }
    
 }

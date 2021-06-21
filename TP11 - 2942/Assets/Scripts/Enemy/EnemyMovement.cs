@@ -8,8 +8,6 @@ public class EnemyMovement : MonoBehaviour
     private Vector2 _target;
     private Rigidbody2D _rb;
     private Vector2 _look;
-    [SerializeField]private bool lookAt;
-    
     private void Awake()
     {
         _rb = GetComponent<Rigidbody2D>();
@@ -28,15 +26,13 @@ public class EnemyMovement : MonoBehaviour
 
         if (dist > _trackingRadius)
         {
-            _target = Vector2.down.normalized;
-            if (lookAt)
-                gameObject.transform.up = _look;// reemplaza al lookat
+            _target =  gameObject.transform.up;
+            gameObject.transform.up = _look;// reemplaza al lookat
         }
         else
         {
             _target =_player.position.normalized;
-            if (lookAt)
-                gameObject.transform.up = _player.position - gameObject.transform.position;// reemplaza al lookat
+            gameObject.transform.up = _player.position - gameObject.transform.position;// reemplaza al lookat
         }
       
     }
