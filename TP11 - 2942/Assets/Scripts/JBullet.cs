@@ -40,9 +40,9 @@ public class JBullet : MonoBehaviour
     {
         Destroy(gameObject);
     }
-    private void OnCollisionEnter(Collision collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        IHittable hit = GetComponent<IHittable>();
+        IHittable hit = collision.transform.GetComponent<IHittable>();
         if (hit != null)
         {
             hit.Damage();

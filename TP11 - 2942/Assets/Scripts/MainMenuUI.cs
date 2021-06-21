@@ -6,7 +6,7 @@ public class MainMenuUI : MonoBehaviour
 {
     public void PlayGame()
     {
-        //GameManager.Instance.ChangeScene("GamePlay");
+        GameManager.Instance.ChangeScene("Level1");
     }
 
     public void ExitGame()

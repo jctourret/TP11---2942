@@ -18,6 +18,6 @@ public class GameOverUI : MonoBehaviour
 
     public void BackToMenu()
     {
-        //GameManager.Instance.ChangeScene("MainMenu");
+        GameManager.Instance.ChangeScene("MainMenu");
     }
 }
