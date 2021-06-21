@@ -63,4 +63,6 @@ public class PlayerController : MonoBehaviour
     {
         GameObject bombInstance = Instantiate(_bomb, transform.position,Quaternion.identity);
     }
+
+
 }

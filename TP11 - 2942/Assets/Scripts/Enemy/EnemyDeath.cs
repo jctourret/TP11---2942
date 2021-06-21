@@ -1,7 +1,10 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 public class EnemyDeath : MonoBehaviour,IHittable
 {
+    public static Action onEnemyDeath;
+
     private Animator _animator;
     private void Awake()
     {
@@ -15,6 +18,7 @@ public class EnemyDeath : MonoBehaviour,IHittable
     public void Death()
     {
         Destroy(gameObject);
+        onEnemyDeath?.Invoke();
     }
     
 }
