@@ -41,3 +41,18 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Background
+    uniqueID: 1829127993
+    locked: 0
+  - name: Nebula
+    uniqueID: 3254601533
+    locked: 0
+  - name: Suns
+    uniqueID: 240628475
+    locked: 0
+  - name: Planetoids
+    uniqueID: 3667779049
+    locked: 0
+  - name: Dust
+    uniqueID: 1068476981
+    locked: 0
