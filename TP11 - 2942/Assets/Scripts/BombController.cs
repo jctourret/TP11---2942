@@ -5,7 +5,7 @@ using UnityEngine.Jobs;
 
 public class BombController : MonoBehaviour
 {
-    float _travelDistance = 20;
+    float _travelDistance = 5.0f;
     float _maxDistantce;
     float _speed = 5.0f;
     float _explosionRadius = 100;

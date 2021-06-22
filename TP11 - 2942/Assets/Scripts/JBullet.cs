@@ -2,12 +2,24 @@
 
 public class JBullet : MonoBehaviour
 {
+    public static float scaleMultiplier = 1.0f;
     private Rigidbody2D _rb;
     [SerializeField] private float _speed = 20;
     private Animator _animator;
     private BoxCollider2D _collider;
     Renderer _renderer;
     Vector3 _direction;
+
+    private void OnEnable()
+    {
+        BulletScaleUp.bulletScaleUp += scaleUp;
+    }
+
+    private void OnDisable()
+    {
+        BulletScaleUp.bulletScaleUp -= scaleUp;
+    }
+
     private void Awake()
     {
         _rb = GetComponent<Rigidbody2D>();
@@ -15,6 +27,7 @@ public class JBullet : MonoBehaviour
         _renderer = GetComponent<Renderer>();
         _direction = transform.parent.up;
         gameObject.transform.SetParent(null);
+        transform.localScale = transform.localScale * scaleMultiplier;
     }
 
     private void Update()
@@ -40,10 +53,15 @@ public class JBullet : MonoBehaviour
     {
         Destroy(gameObject);
     }
+
+    void scaleUp(float buff)
+    {
+        scaleMultiplier += buff;
+    }
     private void OnCollisionEnter2D(Collision2D collision)
     {
         IHittable hit = collision.transform.GetComponent<IHittable>();
-        if (hit != null)
+        if (hit != null )
         {
             hit.Damage();
         }
