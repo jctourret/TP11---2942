@@ -19,4 +19,12 @@ public class EnemyDeath : MonoBehaviour,IHittable
         onEnemyDeath?.Invoke(_scoreValue);
         Destroy(gameObject);
     }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        IHittable hit = collision.transform.GetComponent<IHittable>();
+        if (hit != null)
+        {
+            hit.Damage();
+        }
+    }
 }

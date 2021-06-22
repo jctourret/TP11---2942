@@ -1443,6 +1443,7 @@ MonoBehaviour:
   bombsText: {fileID: 636232695}
   enemiesKilled: {fileID: 268526577}
   pause: {fileID: 638151530}
+  playerEnergy: 0
 --- !u!114 &637437401
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1915,7 +1916,7 @@ MonoBehaviour:
   - type: 0
     pos: 1
     minute: 0
-    second: 30
+    second: 2
 --- !u!4 &1038831199
 Transform:
   m_ObjectHideFlags: 0

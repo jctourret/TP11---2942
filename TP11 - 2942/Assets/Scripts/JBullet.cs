@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class JBullet : MonoBehaviour
+public class JBullet : MonoBehaviour, IHittable
 {
     public static float scaleMultiplier = 1.0f;
     private Rigidbody2D _rb;

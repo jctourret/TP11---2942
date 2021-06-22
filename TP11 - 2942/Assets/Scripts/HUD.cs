@@ -10,6 +10,7 @@ public class HUD : MonoBehaviour
     [SerializeField] private TMP_Text bombsText;
     [SerializeField] private TMP_Text enemiesKilled;
     [SerializeField] private PauseUI pause;
+    public float playerEnergy;
 
     void Start()
     {
