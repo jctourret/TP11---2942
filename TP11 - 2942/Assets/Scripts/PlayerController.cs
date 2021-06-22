@@ -14,6 +14,8 @@ public class PlayerController : MonoBehaviour, IHittable
     [SerializeField]
     float _fireRate = 0.50f;
     float _fireCooldown;
+    float _invulnerabilityTime = 2.0f;
+    float _invulnerabilityCooldown = 0.0f;
     Vector3 movement;
     GameObject _bullet;
     GameObject _bomb;
@@ -43,6 +45,7 @@ public class PlayerController : MonoBehaviour, IHittable
     {
         movement = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0.0f) * _speed * Time.deltaTime;
         _fireCooldown += Time.deltaTime;
+        _invulnerabilityCooldown += Time.deltaTime;
         if (Input.GetKey(KeyCode.L) && _fireCooldown >= _fireRate)
         {
             fireBullet();
@@ -80,9 +83,16 @@ public class PlayerController : MonoBehaviour, IHittable
     }
     public void Damage()
     {
-        Debug.Log("Recibi daño");
-        onPlayerDamage?.Invoke();
-        _animator.SetBool("Death", true);
+        if (_invulnerabilityCooldown >= _invulnerabilityTime)
+        {
+            Debug.Log("Recibi daño");
+            onPlayerDamage?.Invoke();
+            _invulnerabilityCooldown = 0.0f;
+        }
+        if (_energy <= 0)
+        {
+            _animator.SetBool("Death", true);
+        }
     }
     public void Death()
     {
