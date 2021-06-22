@@ -57,7 +57,8 @@ public class EnemyInstantiator : MonoBehaviour
 
     private void Update()
     {
-        if (_enemies[0].spawnTimeInSeconds > Time.time) { return; }
+        if (_enemies.Count == 0 || _enemies[0].spawnTimeInSeconds > Time.time)
+        { return; }
         InstatiateEnemy(_enemies[0]);
     }
 
