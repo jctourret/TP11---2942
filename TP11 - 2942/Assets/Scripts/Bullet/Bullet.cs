@@ -7,6 +7,7 @@ public class Bullet : MonoBehaviour,IHittable
     private Animator _animator;
     private BoxCollider2D _collider;
    [SerializeField] private float timeToDestroy;
+   private bool collision;
    private void Awake()
     {
         _rb = GetComponent<Rigidbody2D>();
@@ -20,12 +21,13 @@ public class Bullet : MonoBehaviour,IHittable
     }
     
     private void Move()
-    {  
+    {  if(!collision)
         _rb.MovePosition(_rb.position + Vector2.down.normalized* (_speed * Time.deltaTime));
     }
     
     public void Damage()
     {
+        collision = true;
         _animator.SetBool("Death",true);
     }
 
