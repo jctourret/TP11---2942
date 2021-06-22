@@ -3,10 +3,11 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour, IHittable
 {
-    public static Action onPlayerDamage;
+    public static Action<int> onPlayerDamage;
     public static Action onPlayerDeath;
-
+    public static Action<int> onBombFired;
     int _energy = 3;
+    int _bombsLeft = 3;
     bool _alternativeFire;
     [SerializeField]
     float _speed = 15;
@@ -50,9 +51,11 @@ public class PlayerController : MonoBehaviour, IHittable
         {
             fireBullet();
         }
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && _bombsLeft >0)
         {
             fireBomb();
+            _bombsLeft--;
+            onBombFired?.Invoke(_bombsLeft);
         }
     }
     private void FixedUpdate()
@@ -86,7 +89,7 @@ public class PlayerController : MonoBehaviour, IHittable
         if (_invulnerabilityCooldown >= _invulnerabilityTime)
         {
             Debug.Log("Recibi daño");
-            onPlayerDamage?.Invoke();
+            onPlayerDamage?.Invoke(_energy);
             _invulnerabilityCooldown = 0.0f;
         }
         if (_energy <= 0)
@@ -97,7 +100,7 @@ public class PlayerController : MonoBehaviour, IHittable
     public void Death()
     {
         Debug.Log("Me mori");
-        onPlayerDamage?.Invoke();
+        onPlayerDeath?.Invoke();
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
