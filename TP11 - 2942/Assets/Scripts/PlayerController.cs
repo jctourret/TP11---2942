@@ -114,6 +114,9 @@ public class PlayerController : MonoBehaviour, IHittable
 
     void AddEnergy()
     {
-        _energy++;
+        if (_energy < 3)
+        {
+            _energy++;
+        }
     }
 }
