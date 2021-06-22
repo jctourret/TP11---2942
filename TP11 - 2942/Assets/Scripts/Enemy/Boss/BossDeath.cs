@@ -24,5 +24,11 @@ public class BossDeath : MonoBehaviour
             Destroy(gameObject);
         }
     }
-
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.GetComponent<JBullet>() != null)
+        {
+            Death();
+        }
+    }
 }
