@@ -1,18 +1,14 @@
 ﻿using System;
 using UnityEngine;
-using Random = UnityEngine.Random;
-
 
 public class EnemyDeath : MonoBehaviour,IHittable
 {
-    public static Action onEnemyDeath;
+    public static Action<int> onEnemyDeath;
+    int _scoreValue = 50;
     private Animator _animator;
-    public GameObject _powerUpEnergy;
-    public GameObject _powerUpBullet;
-    
     private void Awake()
     {
-        _animator = GetComponent<Animator>(); 
+        _animator = GetComponent<Animator>();
     }
     public void Damage()
     {
@@ -20,16 +16,7 @@ public class EnemyDeath : MonoBehaviour,IHittable
     }
     public void Death()
     {
-        RandPowerUp();
-        onEnemyDeath?.Invoke();
+        onEnemyDeath?.Invoke(_scoreValue);
         Destroy(gameObject);
     }
-
-    private void RandPowerUp()
-    {
-        bool itemRand = Random.value > 0.5;
-        Instantiate(itemRand ? _powerUpEnergy : _powerUpBullet, transform.position, transform.rotation);
-    }
-    
-    
 }

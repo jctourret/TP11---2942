@@ -29,20 +29,21 @@ public class GameManager : MonoBehaviour
         EnemyDeath.onEnemyDeath += updateScore;
     }
 
-    private void onDisable()
+    private void OnDisable()
     {
         PlayerController.onPlayerDeath -= toCredits;
         EnemyDeath.onEnemyDeath -= updateScore;
     }
 
-    void updateScore()
+    void updateScore(int score)
     {
-
+        _currentScore += score;
     }
 
     void toCredits()
     {
         ChangeScene("GameOver");
+        _highScore = _currentScore;
     }
 
     public void ChangeScene(string sceneName)
