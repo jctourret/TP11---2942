@@ -250,6 +250,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 220f35e5a41aed54a9a1983fdcc95839, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _powerUpEnergy: {fileID: 3075197816613231762, guid: 5865e3a2a6072d747ab5e5b5a9563e22,
+    type: 3}
+  _powerUpBullet: {fileID: 7922511253592424767, guid: f9d29f77619adb341a7df2018741ac96,
+    type: 3}
 --- !u!50 &2670643764968266514
 Rigidbody2D:
   serializedVersion: 4
@@ -450,6 +454,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 220f35e5a41aed54a9a1983fdcc95839, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _powerUpEnergy: {fileID: 3075197816613231762, guid: 5865e3a2a6072d747ab5e5b5a9563e22,
+    type: 3}
+  _powerUpBullet: {fileID: 7922511253592424767, guid: f9d29f77619adb341a7df2018741ac96,
+    type: 3}
 --- !u!50 &2670643765009097588
 Rigidbody2D:
   serializedVersion: 4
@@ -650,6 +658,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 220f35e5a41aed54a9a1983fdcc95839, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _powerUpEnergy: {fileID: 3075197816613231762, guid: 5865e3a2a6072d747ab5e5b5a9563e22,
+    type: 3}
+  _powerUpBullet: {fileID: 7922511253592424767, guid: f9d29f77619adb341a7df2018741ac96,
+    type: 3}
 --- !u!50 &2670643765506802606
 Rigidbody2D:
   serializedVersion: 4

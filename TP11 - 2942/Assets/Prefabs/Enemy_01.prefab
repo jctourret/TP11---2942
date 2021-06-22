@@ -209,6 +209,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 220f35e5a41aed54a9a1983fdcc95839, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _powerUpEnergy: {fileID: 3075197816613231762, guid: 5865e3a2a6072d747ab5e5b5a9563e22,
+    type: 3}
+  _powerUpBullet: {fileID: 7922511253592424767, guid: f9d29f77619adb341a7df2018741ac96,
+    type: 3}
 --- !u!114 &4784313341312134178
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -222,7 +226,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _speed: 2
-  _player: {fileID: 0}
+  _player: {fileID: 378147504685685425, guid: c327058b632bae64db3d79fd03d07afd, type: 3}
   _trackingRadius: 4
 --- !u!1 &1035473847793076462
 GameObject:

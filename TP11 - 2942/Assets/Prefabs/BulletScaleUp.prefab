@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7922511253592424761}
   - component: {fileID: 7922511253592424760}
   - component: {fileID: 2924188478945321351}
+  - component: {fileID: 3536630322696289278}
   m_Layer: 0
   m_Name: BulletScaleUp
   m_TagString: Untagged
@@ -71,7 +72,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 6367425663285893972, guid: eec44bd554b2f3745a8808290411859c,
+  m_Sprite: {fileID: -2863499236874410579, guid: eec44bd554b2f3745a8808290411859c,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -95,3 +96,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 915c3841c7959ff4ea095622cff5f29e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!58 &3536630322696289278
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7922511253592424767}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.0038087964, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.24189764

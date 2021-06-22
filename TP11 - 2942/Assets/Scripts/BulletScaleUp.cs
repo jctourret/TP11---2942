@@ -12,6 +12,7 @@ public class BulletScaleUp : MonoBehaviour
         if(collision.collider.tag == "Player")
         {
             bulletScaleUp?.Invoke(scaleBuff);
+            Destroy(gameObject);
         }
     }
 }

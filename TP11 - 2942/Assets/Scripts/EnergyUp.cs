@@ -9,6 +9,7 @@ public class EnergyUp : MonoBehaviour
         if (collision.collider.tag == "Player")
         {
             energyUp?.Invoke();
+            Destroy(gameObject);
         }
     }
 }

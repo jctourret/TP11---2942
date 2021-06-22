@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3075197816613231772}
   - component: {fileID: 3075197816613231773}
   - component: {fileID: 6206657491481478368}
+  - component: {fileID: 2153886909442495708}
   m_Layer: 0
   m_Name: EnergyUp
   m_TagString: Untagged
@@ -71,7 +72,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1386978170577691240, guid: eec44bd554b2f3745a8808290411859c,
+  m_Sprite: {fileID: 5379323082974078785, guid: eec44bd554b2f3745a8808290411859c,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -95,3 +96,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aef5c1cf859afff4db21d2769bbea9c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!58 &2153886909442495708
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3075197816613231762}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.0099135935, y: -0.009913623}
+  serializedVersion: 2
+  m_Radius: 0.25938806
