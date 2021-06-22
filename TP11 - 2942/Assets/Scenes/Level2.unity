@@ -1916,7 +1916,7 @@ MonoBehaviour:
   - type: 0
     pos: 1
     minute: 0
-    second: 2
+    second: 30
 --- !u!4 &1038831199
 Transform:
   m_ObjectHideFlags: 0
